@@ -1,0 +1,43 @@
+<?php
+// Start the session
+session_start();
+?>
+<html>
+<head>
+<script>
+var stage="<?php echo $_SESSION["stage"]; ?>";
+
+window.onload=function init(){
+        
+           if(stage==1)
+{
+   //window.open("/Sher/lift2.html",first);
+  // exit;
+}
+else if(stage==2)
+{
+   window.open("/Sher/lift2.html",first);
+  
+}
+else if(stage==3)
+{
+   window.open("/Sher/lift3.html",first);
+   
+}
+else
+{
+ 
+}       
+ window.history.forward();
+                          
+                
+                 
+            }
+
+</script>
+</head>
+<frameset rows="10%,*">
+<frame name="first" src="leader.html">
+<frame name="second">
+</frameset>
+</html>

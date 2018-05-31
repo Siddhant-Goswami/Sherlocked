@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+       
+ <style>
+           body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    background: #555;
+    padding: 20px 30px 20px 30px;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #D3D3D3;
+    text-shadow: 1px 1px 1px #444;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+h3 {
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom: 1px solid #444;
+    margin: -10px -30px 30px -30px;
+}
+.dark-matter h1>span {
+    display: block;
+    font-size: 11px;
+}
+label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+label {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input[type="text"],input[type="password"] {
+    border: none;
+    color: #525252;
+    height: 25px;
+    line-height:15px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 5px 0px 5px 5px;
+    width: 70%;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    background: #DFDFDF;
+}
+.dark-matter select {
+    background: #DFDFDF url('down-arrow.png') no-repeat right;
+    background: #DFDFDF url('down-arrow.png') no-repeat right;
+    appearance:none;
+    -webkit-appearance:none; 
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+    color: #525252;
+    line-height: 25px;
+}
+.dark-matter textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+}
+button {
+    background: #FFCC02;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #585858;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    text-shadow: 1px 1px 1px #FFE477;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px #3D3D3D;
+    -webkit-box-shadow:1px 1px 1px #3D3D3D;
+    -moz-box-shadow:1px 1px 1px #3D3D3D;
+}
+
+Button:hover{
+    color: #333;
+    background-color: #EBEBEB;
+}
+
+        </style>
+            
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body background="require.jpg">
+        
+<script>
+
+            function validate(){
+                var a=document.forms["myform"]["jTextField1"].value;
+                var b=document.forms["myform"]["jTextField2"].value;
+                var c=document.forms["myform"]["jTextField3"].value;
+                var d=document.forms["myform"]["jTextField4"].value;
+                var e=document.forms["myform"]["jPasswordField1"].value;
+                var f=document.forms["myform"]["jPasswordField2"].value;
+                var g=document.forms["myform"]["jTextField5"].value;
+                var x=document.forms["myform"]["jTextField6"].value;
+           
+                if(a==""||b==""||c==""||d==""||e==""||f==""||g==""||x==""){
+                    alert("All the fields are necessary");
+                    return false;
+                }
+  if(e!=f){alert("passwords donot match");return false;}                if(x!="0"){
+                        alert("Enter points=0 only");
+                        return false;
+                    }
+                    if(isNaN(g)||g.length<10||g.length>10)
+                    {
+                        alert("Enter valid mobile number");
+                        return false;
+                    }
+                    if(e.length<6)
+                {
+                    alert("Password must be of at least 6 characters");
+                    return false;
+                }
+                        
+                }
+               
+            
+        
+</script>
+ 
+      <h3 align="center" style="color:yellow">SHERLOCKED REGISTRATION</h3>
+ 
+
+    <center>
+      <form name="myform" action="index.php" onsubmit="return validate()" method="post">
+ 
+           <label id="jLabel1"  for="id">ID</label>
+     
+      
+            <input name="jTextField1" type="text"><br>
+   
+         <label id="jLabel2" for="gp1">Group member 1</label>
+ 
+           <input name="jTextField2" type="text"><br>
+      
+      <label id="jLabel3" for="gp3">Group Member 2</label>
+ 
+          
+           
+            <input name="jTextField3" type="text"><br>
+
+            <label id="jLabel4" for="gp3">Group member 3</label>
+ 
+          
+            <input name="jTextField4" type="text"><br>
+  
+          <label id="jLabel5" for="mobile">Contact no.</label>
+  
+          
+           
+            <input name="jTextField5" type="text"><br>
+  
+          <label id="jLabel6" for="password">Set Password</label>
+       
+    
+            <input name="jPasswordField1" type="password"><br>
+  
+          <label id="jLabel7" for="id">Confirm Password</label>
+       
+    
+            <input name="jPasswordField2" type="password"><br>
+ 
+           <label id="jLabel8" for="points">POINTS</label>
+        
+   
+            <input name="jTextField6" type="text" value="0" readonly><br>
+      
+            <button type="submit" id="jButton1" >REGISTER</button> <br>
+</form><br>
+           <form action="login.html">
+            <button id="login" type="submit">SIGN IN</button>
+        
+        </form>
+</center>
+            
+                 
+                      
+        
+   
+ </body>
+
+</html>

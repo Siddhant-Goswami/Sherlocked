@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+h3{
+
+color:red;
+font-size:40px;
+}
+#a{
+align:center;
+color:green;
+font-size:20px;
+}
+#b{
+color:blue;
+font-size:20px;
+}
+#c{
+color:blue;
+font-size:16px;
+}
+#ab{
+a:visited:pink;
+a:hover:blue;
+color:green;
+}
+h4{
+font-size:24px;
+color:purple;
+}
+
+</style>
+</head>
+<body>
+<script>
+function validate(){
+var r=confirm("100 marks will be deducted for one hint. Do you want to continue?");
+ if(r==true)
+{
+ return true;
+}
+else 
+{
+ return false;
+}
+
+}
+</script>
+<h3 align='center'>Sherlocked Story line</h3>
+<pre id="a">
+Watson:Hey Sherlock,you have a mail."
+Sherlock:"Not interested"
+Watson:"I guess it's important,its from our old friend Detective Inspector Mike'"
+Sherlock:"Let me have a look"
+</pre><br>
+<h4>Sherlock then<a id="ab" href="email.html" target="_blank">read the email</a></h4>
+<pre id="c">
+Click on "read the email" which will redirect to your first clue.BEST OF LUCK!!!!!!
+</pre>
+<form action="/Sher/hint.php" onsubmit="return validate()">
+<button id="b1" >Hint1</button>
+</form>
+
+
+</body>
+</html>
+
